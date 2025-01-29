@@ -1,0 +1,5 @@
+go.property("color", vmath.vector4(0, 0, 0, 1))
+
+function init(self)
+    msg.post("@render:", "clear_color", { color = self.color })
+end

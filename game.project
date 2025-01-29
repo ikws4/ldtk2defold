@@ -1,0 +1,34 @@
+[bootstrap]
+main_collection = /main/main.collectionc
+render = /orthographic/render/orthographic.renderc
+
+[script]
+shared_state = 1
+
+[display]
+width = 296
+height = 304
+high_dpi = 1
+
+[android]
+input_method = HiddenInputField
+
+[html5]
+scale_mode = stretch
+
+[project]
+title = LDTK
+dependencies#0 = https://github.com/subsoap/defos/archive/refs/tags/v2.8.0.zip
+dependencies#1 = https://github.com/britzl/defold-orthographic/archive/refs/tags/3.3.2.zip
+
+[graphics]
+default_texture_min_filter = nearest
+default_texture_mag_filter = nearest
+
+[defos]
+view_width = 912
+view_height = 888
+
+[library]
+include_dirs = ldtk_parser
+

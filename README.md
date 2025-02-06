@@ -58,6 +58,38 @@ config.tilesets = {}
 return config
 ```
 
+## Applying collisions
+
+The process of adding collisions to the generated collections is a bit manual at the moment. The steps are as follows:
+
+* Create the collision object that you want to be assigned for a layer. You can create a collision object in the `New` context menu.
+* In your config file, set `config.assign_collisions` to `true`
+* Add the collision object to the `config.collisions` table. The key should be the name of the tileset identifier and the value should be the path to collision object.
+* Click `Right Click -> Generate Tilemaps` on the LDTK file in the editor.
+
+```lua
+config.assign_collisions = {
+    ['World'] = {
+        ['Level_0'] = '/path/to/collsion.collisionobject'
+    }
+}
+
+```
+
+For additional details, check the provided example project.
+
+## Example
+
+An example project is provided in the `example` folder. It is a small platformer game with the aim to demonstrate the features of the generator.
+
+## Differences between LDTK and Defold
+
+Following section details some major differences between LDTK and Defold.
+
+* **Important** If the provided image is not a multiple of the tile size, Defold ignores the excess part of image, while LDTK counts it as a tile. This creates differences in numbering of tiles, leading to undefined behaviour
+* Defold uses a X -> Right, Y -> Up coordinate system, while LDTK uses a X -> Right, Y -> Down coordinate system.
+* Defold uses a Z - order to determine the rendering order of the tilemaps, while LDTK uses the order of the layers.
+
 ## Unsupported Features
 
 * Tile offsets are not supported at the moment, because Defold tilemaps do not support tile offsets
@@ -72,6 +104,8 @@ The statement `The converter overwrites any generated collections when the Gener
 This creates a problem when the converter tries to generate a collection with an unsupported component. However, any added gameobject prototypes and thier instance properties are not overwritten.
 
 However, if the properties of an collection instance are changed, Defold will throw an error regarding duplicate node. For this specific reason, generating main collections is marked as experimental.
+
+There is another backend parser that is being developed that will address this issue.
 
 ## Credits
 

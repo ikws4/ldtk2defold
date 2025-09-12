@@ -1,0 +1,6 @@
+go.property('opacity', 1)
+go.property('ref', msg.url())
+
+function init(self)
+   go.set(self.ref, 'tint.w', self.opacity) 
+end

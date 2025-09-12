@@ -1,0 +1,828 @@
+tile_set: "/samples/typical_topdown/typical_topdown/tilesources/TopDown_by_deepnight.tilesource"
+layers {
+  id: "Wall_tops1"
+  z: 0.0
+  cell {
+    x: 5
+    y: 0
+    tile: 23
+  }
+  cell {
+    x: 6
+    y: 0
+    tile: 23
+  }
+  cell {
+    x: 7
+    y: 0
+    tile: 23
+  }
+  cell {
+    x: 8
+    y: 0
+    tile: 23
+  }
+  cell {
+    x: 9
+    y: 0
+    tile: 23
+  }
+  cell {
+    x: 10
+    y: 0
+    tile: 23
+  }
+  cell {
+    x: 11
+    y: 0
+    tile: 23
+  }
+  cell {
+    x: 12
+    y: 0
+    tile: 23
+  }
+  cell {
+    x: 5
+    y: 1
+    tile: 11
+  }
+  cell {
+    x: 12
+    y: 1
+    tile: 11
+  }
+  cell {
+    x: 1
+    y: 2
+    tile: 23
+  }
+  cell {
+    x: 2
+    y: 2
+    tile: 23
+  }
+  cell {
+    x: 3
+    y: 2
+    tile: 23
+  }
+  cell {
+    x: 4
+    y: 2
+    tile: 23
+  }
+  cell {
+    x: 5
+    y: 2
+    tile: 1
+  }
+  cell {
+    x: 6
+    y: 2
+    tile: 23
+  }
+  cell {
+    x: 8
+    y: 2
+    tile: 23
+  }
+  cell {
+    x: 9
+    y: 2
+    tile: 23
+  }
+  cell {
+    x: 12
+    y: 2
+    tile: 11
+  }
+  cell {
+    x: 13
+    y: 2
+    tile: 23
+  }
+  cell {
+    x: 14
+    y: 2
+    tile: 23
+  }
+  cell {
+    x: 1
+    y: 3
+    tile: 12
+  }
+  cell {
+    x: 9
+    y: 3
+    tile: 13
+  }
+  cell {
+    x: 10
+    y: 3
+    tile: 23
+  }
+  cell {
+    x: 11
+    y: 3
+    tile: 23
+  }
+  cell {
+    x: 12
+    y: 3
+    tile: 1
+  }
+  cell {
+    x: 1
+    y: 4
+    tile: 13
+  }
+  cell {
+    x: 4
+    y: 4
+    tile: 23
+  }
+  cell {
+    x: 5
+    y: 4
+    tile: 23
+  }
+  cell {
+    x: 6
+    y: 4
+    tile: 23
+  }
+  cell {
+    x: 9
+    y: 4
+    tile: 13
+  }
+  cell {
+    x: 1
+    y: 5
+    tile: 13
+  }
+  cell {
+    x: 9
+    y: 5
+    tile: 12
+  }
+  cell {
+    x: 1
+    y: 6
+    tile: 13
+  }
+  cell {
+    x: 9
+    y: 6
+    tile: 13
+  }
+  cell {
+    x: 12
+    y: 6
+    tile: 23
+  }
+  cell {
+    x: 13
+    y: 6
+    tile: 23
+  }
+  cell {
+    x: 14
+    y: 6
+    tile: 23
+  }
+  cell {
+    x: 1
+    y: 7
+    tile: 13
+  }
+  cell {
+    x: 4
+    y: 7
+    tile: 23
+  }
+  cell {
+    x: 5
+    y: 7
+    tile: 23
+  }
+  cell {
+    x: 6
+    y: 7
+    tile: 23
+  }
+  cell {
+    x: 9
+    y: 7
+    tile: 1
+  }
+  cell {
+    x: 12
+    y: 7
+    tile: 12
+  }
+  cell {
+    x: 1
+    y: 8
+    tile: 12
+  }
+  cell {
+    x: 12
+    y: 8
+    tile: 11
+  }
+  cell {
+    x: 1
+    y: 9
+    tile: 12
+  }
+  cell {
+    x: 9
+    y: 9
+    tile: 23
+  }
+  cell {
+    x: 10
+    y: 9
+    tile: 23
+  }
+  cell {
+    x: 11
+    y: 9
+    tile: 23
+  }
+  cell {
+    x: 12
+    y: 9
+    tile: 24
+  }
+  cell {
+    x: 1
+    y: 10
+    tile: 13
+  }
+  cell {
+    x: 4
+    y: 10
+    tile: 23
+  }
+  cell {
+    x: 5
+    y: 10
+    tile: 23
+  }
+  cell {
+    x: 6
+    y: 10
+    tile: 23
+  }
+  cell {
+    x: 9
+    y: 10
+    tile: 13
+  }
+  cell {
+    x: 1
+    y: 11
+    tile: 12
+  }
+  cell {
+    x: 9
+    y: 11
+    tile: 11
+  }
+  cell {
+    x: 1
+    y: 12
+    tile: 1
+  }
+  cell {
+    x: 2
+    y: 12
+    tile: 23
+  }
+  cell {
+    x: 3
+    y: 12
+    tile: 23
+  }
+  cell {
+    x: 7
+    y: 12
+    tile: 23
+  }
+  cell {
+    x: 8
+    y: 12
+    tile: 23
+  }
+  cell {
+    x: 9
+    y: 12
+    tile: 1
+  }
+  cell {
+    x: 10
+    y: 12
+    tile: 1
+  }
+  cell {
+    x: 11
+    y: 12
+    tile: 1
+  }
+  cell {
+    x: 12
+    y: 12
+    tile: 1
+  }
+  cell {
+    x: 13
+    y: 12
+    tile: 1
+  }
+  cell {
+    x: 14
+    y: 12
+    tile: 1
+  }
+  cell {
+    x: 3
+    y: 13
+    tile: 1
+  }
+  cell {
+    x: 4
+    y: 13
+    tile: 23
+  }
+  cell {
+    x: 5
+    y: 13
+    tile: 23
+  }
+  cell {
+    x: 6
+    y: 13
+    tile: 23
+  }
+  cell {
+    x: 7
+    y: 13
+    tile: 1
+  }
+}
+layers {
+  id: "Wall_tops2"
+  z: 0.0
+  cell {
+    x: 5
+    y: 0
+    tile: 13
+  }
+  cell {
+    x: 6
+    y: 0
+    tile: 1
+  }
+  cell {
+    x: 7
+    y: 0
+    tile: 1
+  }
+  cell {
+    x: 8
+    y: 0
+    tile: 1
+  }
+  cell {
+    x: 9
+    y: 0
+    tile: 1
+  }
+  cell {
+    x: 10
+    y: 0
+    tile: 1
+  }
+  cell {
+    x: 11
+    y: 0
+    tile: 1
+  }
+  cell {
+    x: 12
+    y: 0
+    tile: 11
+    h_flip: 1
+  }
+  cell {
+    x: 5
+    y: 1
+    tile: 12
+    h_flip: 1
+  }
+  cell {
+    x: 12
+    y: 1
+    tile: 13
+    h_flip: 1
+  }
+  cell {
+    x: 1
+    y: 2
+    tile: 13
+  }
+  cell {
+    x: 2
+    y: 2
+    tile: 1
+  }
+  cell {
+    x: 3
+    y: 2
+    tile: 1
+  }
+  cell {
+    x: 4
+    y: 2
+    tile: 1
+  }
+  cell {
+    x: 5
+    y: 2
+    tile: 24
+  }
+  cell {
+    x: 6
+    y: 2
+    tile: 1
+  }
+  cell {
+    x: 8
+    y: 2
+    tile: 1
+  }
+  cell {
+    x: 9
+    y: 2
+    tile: 13
+    h_flip: 1
+  }
+  cell {
+    x: 12
+    y: 2
+    tile: 24
+    h_flip: 1
+  }
+  cell {
+    x: 13
+    y: 2
+    tile: 1
+  }
+  cell {
+    x: 14
+    y: 2
+    tile: 1
+  }
+  cell {
+    x: 1
+    y: 3
+    tile: 11
+    h_flip: 1
+  }
+  cell {
+    x: 9
+    y: 3
+    tile: 24
+    h_flip: 1
+  }
+  cell {
+    x: 10
+    y: 3
+    tile: 1
+  }
+  cell {
+    x: 11
+    y: 3
+    tile: 1
+  }
+  cell {
+    x: 12
+    y: 3
+    tile: 0
+    h_flip: 1
+  }
+  cell {
+    x: 1
+    y: 4
+    tile: 12
+    h_flip: 1
+  }
+  cell {
+    x: 4
+    y: 4
+    tile: 1
+  }
+  cell {
+    x: 5
+    y: 4
+    tile: 1
+  }
+  cell {
+    x: 6
+    y: 4
+    tile: 1
+  }
+  cell {
+    x: 9
+    y: 4
+    tile: 13
+    h_flip: 1
+  }
+  cell {
+    x: 1
+    y: 5
+    tile: 12
+    h_flip: 1
+  }
+  cell {
+    x: 9
+    y: 5
+    tile: 13
+    h_flip: 1
+  }
+  cell {
+    x: 1
+    y: 6
+    tile: 12
+    h_flip: 1
+  }
+  cell {
+    x: 9
+    y: 6
+    tile: 13
+    h_flip: 1
+  }
+  cell {
+    x: 12
+    y: 6
+    tile: 13
+  }
+  cell {
+    x: 1
+    y: 7
+    tile: 11
+    h_flip: 1
+  }
+  cell {
+    x: 4
+    y: 7
+    tile: 1
+  }
+  cell {
+    x: 5
+    y: 7
+    tile: 1
+  }
+  cell {
+    x: 6
+    y: 7
+    tile: 1
+  }
+  cell {
+    x: 9
+    y: 7
+    tile: 0
+  }
+  cell {
+    x: 1
+    y: 8
+    tile: 11
+    h_flip: 1
+  }
+  cell {
+    x: 1
+    y: 9
+    tile: 13
+    h_flip: 1
+  }
+  cell {
+    x: 9
+    y: 9
+    tile: 12
+  }
+  cell {
+    x: 1
+    y: 10
+    tile: 13
+    h_flip: 1
+  }
+  cell {
+    x: 4
+    y: 10
+    tile: 1
+  }
+  cell {
+    x: 5
+    y: 10
+    tile: 1
+  }
+  cell {
+    x: 6
+    y: 10
+    tile: 1
+  }
+  cell {
+    x: 1
+    y: 11
+    tile: 11
+    h_flip: 1
+  }
+  cell {
+    x: 1
+    y: 12
+    tile: 0
+  }
+  cell {
+    x: 2
+    y: 12
+    tile: 1
+  }
+  cell {
+    x: 3
+    y: 12
+    tile: 13
+    h_flip: 1
+  }
+  cell {
+    x: 7
+    y: 12
+    tile: 13
+  }
+  cell {
+    x: 8
+    y: 12
+    tile: 1
+  }
+  cell {
+    x: 9
+    y: 12
+    tile: 24
+  }
+  cell {
+    x: 3
+    y: 13
+    tile: 0
+  }
+  cell {
+    x: 4
+    y: 13
+    tile: 1
+  }
+  cell {
+    x: 5
+    y: 13
+    tile: 1
+  }
+  cell {
+    x: 6
+    y: 13
+    tile: 1
+  }
+  cell {
+    x: 7
+    y: 13
+    tile: 0
+    h_flip: 1
+  }
+}
+layers {
+  id: "Wall_tops3"
+  z: 0.0
+  cell {
+    x: 5
+    y: 0
+    tile: 2
+    h_flip: 1
+  }
+  cell {
+    x: 12
+    y: 0
+    tile: 2
+  }
+  cell {
+    x: 1
+    y: 2
+    tile: 2
+    h_flip: 1
+  }
+  cell {
+    x: 5
+    y: 2
+    tile: 24
+    h_flip: 1
+  }
+  cell {
+    x: 6
+    y: 2
+    tile: 0
+    h_flip: 1
+  }
+  cell {
+    x: 8
+    y: 2
+    tile: 0
+  }
+  cell {
+    x: 9
+    y: 2
+    tile: 2
+  }
+  cell {
+    x: 12
+    y: 2
+    tile: 2
+    h_flip: 1
+  }
+  cell {
+    x: 9
+    y: 3
+    tile: 2
+    h_flip: 1
+  }
+  cell {
+    x: 12
+    y: 3
+    tile: 24
+  }
+  cell {
+    x: 4
+    y: 4
+    tile: 0
+  }
+  cell {
+    x: 6
+    y: 4
+    tile: 0
+    h_flip: 1
+  }
+  cell {
+    x: 4
+    y: 7
+    tile: 0
+  }
+  cell {
+    x: 6
+    y: 7
+    tile: 0
+    h_flip: 1
+  }
+  cell {
+    x: 9
+    y: 7
+    tile: 0
+    h_flip: 1
+  }
+  cell {
+    x: 4
+    y: 10
+    tile: 0
+  }
+  cell {
+    x: 6
+    y: 10
+    tile: 0
+    h_flip: 1
+  }
+  cell {
+    x: 1
+    y: 12
+    tile: 24
+    h_flip: 1
+  }
+  cell {
+    x: 3
+    y: 12
+    tile: 2
+  }
+  cell {
+    x: 7
+    y: 12
+    tile: 2
+    h_flip: 1
+  }
+  cell {
+    x: 3
+    y: 13
+    tile: 24
+    h_flip: 1
+  }
+  cell {
+    x: 7
+    y: 13
+    tile: 24
+  }
+}
+material: "/builtins/materials/tile_map.material"

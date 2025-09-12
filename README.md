@@ -12,105 +12,89 @@ Or point to the zip file of a [specific release](https://github.com/TheKing0x9/l
 
 ## Usage
 
-Simply copy your LDTK project file to your Defold project, add a configuration file and click `Right Click -> Generate Tilemaps` on the LDTK file in the editor.
+* Add this library to your project
+* Copy the LDTK project file and relevant tileset images to your Defold project
+* Add a configuration file as detailed below
+* Click `View -> Change LDTK Config File` and select the config file.
+* Click `Right Click -> Generate Tilemaps` on the LDTK file in the editor.
+
 This will create a folder with the same name as the LDTK file and place the generated tilemaps, tilesources and collections in it.
 
-At the moment the converter generates the following:
+The converter generates the following:
 
 * Defold tilesources using the same settings as specified in the LDTK file
 * Defold tilemaps (one tilemap per layer)
-* Defold collections (one collection per level) with all the tilemaps and gameobjects placed as in the LDTK file
+* Defold collections (one collection per level) with all the tilemaps and gameobjects placed as in the LDTK file.
+* A collection that has levels placed exactly as in LDTK world view.
 * A Lua Module that contains Enums, and Entities and World properties.
 
-> Remember to add the provided iid.script to any gameobject that needs to be generated as an entity.
+> Ensure that the images referred to in LDTK projects are within the Defold project's directory.
 
-> The converter overwrites any generated collections when the `Generate Tilemaps` option is clicked. So, try not to make any changes to the generated collections, as they will be lost. This is also true if a `main` collection is generated.
+> Remember to add the provided iid.script to any gameobject that needs to be generated as an entity.
 
 ## Configuration File
 
 The project expects a config file for defining entity -> gameobject mapping and other settings. By default the file should be named `config.lua` and placed at the root of the project.
+
 However, this is configurable in the editor using `View -> Change LDTK Config File`. At the moment the config file has the following settings:
+
+> The config file is loaded sandboxed, which means that all of the lua global functions and libraries are **not** available.
 
 ```lua
 local config = {}
--- assigns collision images to the tilesources. If set to true, the converter will first look for an upvalue
--- in the following collisions table
+
+-- assigns collision images to the tilesources.
 config.assign_collisions = true
 
--- table of collision images to assign to the tilesources
--- the key is the name of the tileset identifier and value is the collision image
--- Tilesets for which the collision images are not defined default to the tileset image
-config.collisions = {}
+-- directory in which project files are generated. Defaults to the directory .ldtk file is in.
+config.project_root = '/path/to/project'
 
--- generates a collection that contains all the levels, placed as in the LDTK file
--- !!!!!!!!!!!!!!!EXPERIMENTAL!!!!!!!!!!!!!
-config.generate_main_collection = true
+-- whether to generate only levels or to also generate a main collection with all levels placed as in LDTK world view.
+config.map_type = enums.map_type.LEVELS_ONLY -- or enums.map_type.MAIN_COLLECTION
 
 -- when the LDTK Layout is set to Horizontal or Vertical, this value is used to offset the levels
 config.lvl_offsets = 48
 
 -- assigns a gameobject to an entity. The key is the entity name and the value is the gameobject name
+-- example: to create a reference for entitiy player
+-- config.entities = { ['Player'] = '/example/gameobjects/player.go', }
 config.entities = {}
 
 -- mapping of tileset identifer to the respective images
+-- example: to specify image for tileset Scifi_tileset in LDTK project
+-- config.tilesets = { ["Scifi_tileset"] = '/example/assets/images/tileset/level_tileset.png' }
 config.tilesets = {}
+
+-- save the Defold project after generation?
+config.save = false
 
 return config
 ```
 
-## Applying collisions
-
-The process of adding collisions to the generated collections is a bit manual at the moment. The steps are as follows:
-
-* Create the collision object that you want to be assigned for a layer. You can create a collision object in the `New` context menu.
-* In your config file, set `config.assign_collisions` to `true`
-* Add the collision object to the `config.collisions` table. The key should be the name of the tileset identifier and the value should be the path to collision object.
-* Click `Right Click -> Generate Tilemaps` on the LDTK file in the editor.
-
-```lua
-config.assign_collisions = {
-    ['World'] = {
-        ['Level_0'] = '/path/to/collsion.collisionobject'
-    }
-}
-
-```
-
-For additional details, check the provided example project.
-
 ## Example
 
-An example project is provided in the `example` folder. It is a small platformer game with the aim to demonstrate the features of the generator.
+An example project is provided in the `example` folder. It is a small platformer game with the aim to demonstrate the features of the generator. Some samples shipped alongwith LDTK are also provided in the `samples` folder.
 
 ## Differences between LDTK and Defold
 
 Following section details some major differences between LDTK and Defold.
 
 * **Important** If the provided image is not a multiple of the tile size, Defold ignores the excess part of image, while LDTK counts it as a tile. This creates differences in numbering of tiles, leading to undefined behaviour
-* Defold uses a X -> Right, Y -> Up coordinate system, while LDTK uses a X -> Right, Y -> Down coordinate system.
+* Defold uses a X -> Right, Y -> Up coordinate system, while LDTK uses a X -> Right, Y -> Down coordinate system. While the layout of generated collections will be the same, expect some changes in the actual positions.
 * Defold uses a Z - order to determine the rendering order of the tilemaps, while LDTK uses the order of the layers.
 
 ## Unsupported Features
 
 * Tile offsets are not supported at the moment, because Defold tilemaps do not support tile offsets
-* Tile opacity are not supported for the same reason
+* Tile opacity is not supported for the same reason. However, a common layer opacity is supported.
 * Tilemaps without an images are also not supported. This may change in the near future, perhaps by exporting such tilemaps to a simple table?
 * Background images are not supported at the moment. Will be added in the next release
 * A way to specify the a layer / entity Z - order needs to be decided upon.
-
-## Known Issues
-
-The statement `The converter overwrites any generated collections when the Generate Tilemaps option is clicked` is not entirely accurate. The converter does not support every component that an embedded game object can have.
-This creates a problem when the converter tries to generate a collection with an unsupported component. However, any added gameobject prototypes and thier instance properties are not overwritten.
-
-However, if the properties of an collection instance are changed, Defold will throw an error regarding duplicate node. For this specific reason, generating main collections is marked as experimental.
-
-There is another backend parser that is being developed that will address this issue.
 
 ## Credits
 
 - [LDTK](https://ldtk.io/) by [Deepnight](https://deepnight.net/)
 - [json.lua](https://github.com/rxi/json.lua) by [rxi](https://github.com/rxi/)
-- [Defold Collection Parser](https://github.com/rgrams/defold_collection_parser/) by [rgrams](https://github.com/rgrams/)
+- [Defold Collection Parser](https://github.com/rgrams/defold_collection_parser/) by [rgrams](https://github.com/rgrams/) was used in earlier iterations of this project.
 
 ---

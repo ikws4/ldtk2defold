@@ -1,10 +1,37 @@
 name: "Level_0"
 instances {
+  id: "Barrier"
+  prototype: "/example/gameobjects/barrier.go"
+  position {
+    x: 576.0
+    y: 224.0
+    z: -0.002
+  }
+  component_properties {
+    id: "iid"
+    properties {
+      id: "iid"
+      value: "79197c40-c210-11ef-bc88-4d3d1fbaa0ad"
+      type: PROPERTY_TYPE_HASH
+    }
+  }
+}
+instances {
+  id: "Camera"
+  prototype: "/example/gameobjects/camera.go"
+  position {
+    x: 320.0
+    y: 240.0
+    z: -0.002
+  }
+}
+instances {
   id: "Player"
   prototype: "/example/gameobjects/player.go"
   position {
     x: 40.0
     y: 64.0
+    z: -0.002
   }
   component_properties {
     id: "iid"
@@ -16,35 +43,12 @@ instances {
   }
 }
 instances {
-  id: "Camera"
-  prototype: "/example/gameobjects/camera.go"
-  position {
-    x: 320.0
-    y: 240.0
-  }
-}
-instances {
-  id: "Lift"
-  prototype: "/example/gameobjects/lift.go"
-  position {
-    x: 232.0
-    y: 232.0
-  }
-  component_properties {
-    id: "iid"
-    properties {
-      id: "iid"
-      value: "1407ddb0-c210-11ef-b069-f56b07cb3c0d"
-      type: PROPERTY_TYPE_HASH
-    }
-  }
-}
-instances {
   id: "Terminal"
   prototype: "/example/gameobjects/terminal.go"
   position {
     x: 96.0
     y: 384.0
+    z: -0.002
   }
   component_properties {
     id: "iid"
@@ -56,60 +60,26 @@ instances {
   }
 }
 instances {
-  id: "Barrier"
-  prototype: "/example/gameobjects/barrier.go"
+  id: "Lift"
+  prototype: "/example/gameobjects/lift.go"
   position {
-    x: 576.0
-    y: 224.0
+    x: 232.0
+    y: 232.0
+    z: -0.002
   }
   component_properties {
     id: "iid"
     properties {
       id: "iid"
-      value: "79197c40-c210-11ef-bc88-4d3d1fbaa0ad"
+      value: "1407ddb0-c210-11ef-b069-f56b07cb3c0d"
       type: PROPERTY_TYPE_HASH
     }
   }
 }
 scale_along_z: 0
 embedded_instances {
-  id: "IntGrid"
-  data: "components {\n"
-  "  id: \"IntGrid\"\n"
-  "  component: \"/example/platformer/Level_0/IntGrid.tilemap\"\n"
-  "  position {\n"
-  "    z: -0.003\n"
-  "  }\n"
-  "}\n"
-  "components {\n"
-  "  id: \"collisionobject\"\n"
-  "  component: \"/example/collisions/IntGrid.collisionobject\"\n"
-  "}\n"
-  ""
-}
-embedded_instances {
-  id: "Tiles"
-  data: "components {\n"
-  "  id: \"Tiles\"\n"
-  "  component: \"/example/platformer/Level_0/Tiles.tilemap\"\n"
-  "  position {\n"
-  "    z: -0.001\n"
-  "  }\n"
-  "}\n"
-  ""
-}
-embedded_instances {
   id: "world"
   data: "components {\n"
-  "  id: \"clear_color\"\n"
-  "  component: \"/ldtk2defold/scripts/clear_color.script\"\n"
-  "  properties {\n"
-  "    id: \"color\"\n"
-  "    value: \"0.4117647058823529, 0.41568627450980394, 0.4745098039215686, 1.0\"\n"
-  "    type: PROPERTY_TYPE_VECTOR4\n"
-  "  }\n"
-  "}\n"
-  "components {\n"
   "  id: \"iid\"\n"
   "  component: \"/ldtk2defold/scripts/iid.script\"\n"
   "  properties {\n"
@@ -118,5 +88,99 @@ embedded_instances {
   "    type: PROPERTY_TYPE_HASH\n"
   "  }\n"
   "}\n"
+  "components {\n"
+  "  id: \"clear_color\"\n"
+  "  component: \"/ldtk2defold/scripts/clear_color.script\"\n"
+  "  properties {\n"
+  "    id: \"color\"\n"
+  "    value: \"0.4117647058823529, 0.41568627450980394, 0.4745098039215686, 1.0\"\n"
+  "    type: PROPERTY_TYPE_VECTOR4\n"
+  "  }\n"
+  "}\n"
   ""
+}
+embedded_instances {
+  id: "Layer_Tiles"
+  children: "Tiles"
+  data: ""
+}
+embedded_instances {
+  id: "Tiles"
+  data: "components {\n"
+  "  id: \"Tiles\"\n"
+  "  component: \"/example/platformer/Level_0/Tiles.tilemap\"\n"
+  "}\n"
+  "components {\n"
+  "  id: \"opacity\"\n"
+  "  component: \"/ldtk2defold/scripts/opacity.script\"\n"
+  "  properties {\n"
+  "    id: \"opacity\"\n"
+  "    value: \"1.0\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"ref\"\n"
+  "    value: \"#Tiles\"\n"
+  "    type: PROPERTY_TYPE_URL\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 32.0
+    y: 32.0
+    z: -0.001
+  }
+}
+embedded_instances {
+  id: "Layer_IntGrid"
+  children: "IntGrid"
+  data: ""
+}
+embedded_instances {
+  id: "IntGrid"
+  data: "components {\n"
+  "  id: \"IntGrid\"\n"
+  "  component: \"/example/platformer/Level_0/IntGrid.tilemap\"\n"
+  "}\n"
+  "components {\n"
+  "  id: \"opacity\"\n"
+  "  component: \"/ldtk2defold/scripts/opacity.script\"\n"
+  "  properties {\n"
+  "    id: \"opacity\"\n"
+  "    value: \"1.0\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"ref\"\n"
+  "    value: \"#IntGrid\"\n"
+  "    type: PROPERTY_TYPE_URL\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"collisionobject\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"collision_shape: \\\"/example/platformer/Level_0/IntGrid.tilemap\\\"\\n"
+  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"ground\\\"\\n"
+  "mask: \\\"player\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
+  position {
+    x: 32.0
+    y: 32.0
+    z: -0.003
+  }
+}
+embedded_instances {
+  id: "Entities"
+  children: "Barrier"
+  children: "Camera"
+  children: "Lift"
+  children: "Player"
+  children: "Terminal"
+  data: ""
 }

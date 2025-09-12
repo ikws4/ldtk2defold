@@ -1,0 +1,6 @@
+tile_set: "/samples/typical_topdown/typical_topdown/tilesources/TopDown_by_deepnight.tilesource"
+layers {
+  id: "Custom_floor1"
+  z: 0.0
+}
+material: "/builtins/materials/tile_map.material"

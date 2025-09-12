@@ -1,0 +1,120 @@
+name: "Your_typical_2D_platformer"
+scale_along_z: 0
+embedded_instances {
+  id: "world"
+  data: "components {\n"
+  "  id: \"iid\"\n"
+  "  component: \"/ldtk2defold/scripts/iid.script\"\n"
+  "  properties {\n"
+  "    id: \"iid\"\n"
+  "    value: \"a315ac10-66b0-11ec-9cd7-99f223ad6ade\"\n"
+  "    type: PROPERTY_TYPE_HASH\n"
+  "  }\n"
+  "}\n"
+  "components {\n"
+  "  id: \"clear_color\"\n"
+  "  component: \"/ldtk2defold/scripts/clear_color.script\"\n"
+  "  properties {\n"
+  "    id: \"color\"\n"
+  "    value: \"0.3137254901960784, 0.3137254901960784, 0.41568627450980394, 1\"\n"
+  "    type: PROPERTY_TYPE_VECTOR4\n"
+  "  }\n"
+  "}\n"
+  ""
+}
+embedded_instances {
+  id: "Layer_AutoLayer"
+  children: "Bg_textures"
+  children: "Wall_shadows"
+  data: ""
+}
+embedded_instances {
+  id: "Wall_shadows"
+  data: "components {\n"
+  "  id: \"Wall_shadows\"\n"
+  "  component: \"/samples/typical_platformer/typical_platformer/Your_typical_2D_platformer/Wall_shadows.tilemap\"\n"
+  "}\n"
+  "components {\n"
+  "  id: \"opacity\"\n"
+  "  component: \"/ldtk2defold/scripts/opacity.script\"\n"
+  "  properties {\n"
+  "    id: \"opacity\"\n"
+  "    value: \"0.17\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"ref\"\n"
+  "    value: \"#Wall_shadows\"\n"
+  "    type: PROPERTY_TYPE_URL\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 16.0
+    y: 16.0
+    z: -0.002
+  }
+}
+embedded_instances {
+  id: "Bg_textures"
+  data: "components {\n"
+  "  id: \"Bg_textures\"\n"
+  "  component: \"/samples/typical_platformer/typical_platformer/Your_typical_2D_platformer/Bg_textures.tilemap\"\n"
+  "}\n"
+  "components {\n"
+  "  id: \"opacity\"\n"
+  "  component: \"/ldtk2defold/scripts/opacity.script\"\n"
+  "  properties {\n"
+  "    id: \"opacity\"\n"
+  "    value: \"1\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"ref\"\n"
+  "    value: \"#Bg_textures\"\n"
+  "    type: PROPERTY_TYPE_URL\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 16.0
+    y: 16.0
+    z: -0.004
+  }
+}
+embedded_instances {
+  id: "Layer_IntGrid"
+  children: "Collisions"
+  data: ""
+}
+embedded_instances {
+  id: "Collisions"
+  data: "components {\n"
+  "  id: \"Collisions\"\n"
+  "  component: \"/samples/typical_platformer/typical_platformer/Your_typical_2D_platformer/Collisions.tilemap\"\n"
+  "}\n"
+  "components {\n"
+  "  id: \"opacity\"\n"
+  "  component: \"/ldtk2defold/scripts/opacity.script\"\n"
+  "  properties {\n"
+  "    id: \"opacity\"\n"
+  "    value: \"1\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"ref\"\n"
+  "    value: \"#Collisions\"\n"
+  "    type: PROPERTY_TYPE_URL\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 16.0
+    y: 16.0
+    z: -0.003
+  }
+}
+embedded_instances {
+  id: "Entities"
+  data: ""
+}

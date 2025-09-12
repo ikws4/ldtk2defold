@@ -4,9 +4,10 @@ local config = {}
 -- if this option is enabled, the generator first searches for an upvalue in collsions table,
 -- otherwise, the same image is assigned as the collision source
 config.assign_collision = true
-config.generate_main_collection = false
+config.map_type = enums.map_type.LEVELS_ONLY
 
 config.data_file = '/example/scripts/data.lua'
+config.main_collection_name = 'main'
 
 config.collisions = {
     ['Level_0'] = {
@@ -31,5 +32,7 @@ config.entities = {
 config.tilesets = {
     ['Scifi_tileset'] = '/example/assets/images/tileset/level_tileset.png'
 }
+
+config.save = true
 
 return config

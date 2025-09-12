@@ -31,5 +31,4 @@ include_dirs = ldtk_parser
 
 [physics]
 use_fixed_timestep = 1
-debug = 1
 

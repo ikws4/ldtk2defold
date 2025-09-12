@@ -1,0 +1,135 @@
+name: "Cross_roads"
+scale_along_z: 0
+embedded_instances {
+  id: "world"
+  data: "components {\n"
+  "  id: \"iid\"\n"
+  "  component: \"/ldtk2defold/scripts/iid.script\"\n"
+  "  properties {\n"
+  "    id: \"iid\"\n"
+  "    value: \"a36811d0-66b0-11ec-9cd7-4367627fb745\"\n"
+  "    type: PROPERTY_TYPE_HASH\n"
+  "  }\n"
+  "}\n"
+  "components {\n"
+  "  id: \"clear_color\"\n"
+  "  component: \"/ldtk2defold/scripts/clear_color.script\"\n"
+  "  properties {\n"
+  "    id: \"color\"\n"
+  "    value: \"0.21568627450980393, 0.28627450980392155, 0.3058823529411765, 1\"\n"
+  "    type: PROPERTY_TYPE_VECTOR4\n"
+  "  }\n"
+  "}\n"
+  ""
+}
+embedded_instances {
+  id: "Layer_AutoLayer"
+  children: "Background"
+  children: "Wall_shadows"
+  data: ""
+}
+embedded_instances {
+  id: "Wall_shadows"
+  data: "components {\n"
+  "  id: \"Wall_shadows\"\n"
+  "  component: \"/samples/gridvania/gridvania/Cross_roads/Wall_shadows.tilemap\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "}\n"
+  "components {\n"
+  "  id: \"opacity\"\n"
+  "  component: \"/ldtk2defold/scripts/opacity.script\"\n"
+  "  properties {\n"
+  "    id: \"opacity\"\n"
+  "    value: \"0.53\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"ref\"\n"
+  "    value: \"#Wall_shadows\"\n"
+  "    type: PROPERTY_TYPE_URL\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 16.0
+    y: 16.0
+    z: -0.002
+  }
+}
+embedded_instances {
+  id: "Background"
+  data: "components {\n"
+  "  id: \"Background\"\n"
+  "  component: \"/samples/gridvania/gridvania/Cross_roads/Background.tilemap\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "}\n"
+  "components {\n"
+  "  id: \"opacity\"\n"
+  "  component: \"/ldtk2defold/scripts/opacity.script\"\n"
+  "  properties {\n"
+  "    id: \"opacity\"\n"
+  "    value: \"1\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"ref\"\n"
+  "    value: \"#Background\"\n"
+  "    type: PROPERTY_TYPE_URL\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 16.0
+    y: 16.0
+    z: -0.004
+  }
+}
+embedded_instances {
+  id: "Layer_IntGrid"
+  children: "Collisions"
+  data: ""
+}
+embedded_instances {
+  id: "Collisions"
+  data: "components {\n"
+  "  id: \"Collisions\"\n"
+  "  component: \"/samples/gridvania/gridvania/Cross_roads/Collisions.tilemap\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "}\n"
+  "components {\n"
+  "  id: \"opacity\"\n"
+  "  component: \"/ldtk2defold/scripts/opacity.script\"\n"
+  "  properties {\n"
+  "    id: \"opacity\"\n"
+  "    value: \"1\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"ref\"\n"
+  "    value: \"#Collisions\"\n"
+  "    type: PROPERTY_TYPE_URL\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 16.0
+    y: 16.0
+    z: -0.003
+  }
+}
+embedded_instances {
+  id: "Entities"
+  data: ""
+}

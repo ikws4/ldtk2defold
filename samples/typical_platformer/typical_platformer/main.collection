@@ -1,0 +1,38 @@
+name: "main"
+collection_instances {
+  id: "Your_typical_2D_platformer"
+  collection: "/samples/typical_platformer/typical_platformer/Your_typical_2D_platformer.collection"
+  position {
+    x: 0.0
+    y: -336.0
+    z: 0.0
+  }
+}
+collection_instances {
+  id: "Top"
+  collection: "/samples/typical_platformer/typical_platformer/Top.collection"
+  position {
+    x: 352.0
+    y: 0.0
+    z: 0.0
+  }
+}
+collection_instances {
+  id: "Bottom"
+  collection: "/samples/typical_platformer/typical_platformer/Bottom.collection"
+  position {
+    x: 80.0
+    y: -592.0
+    z: 0.0
+  }
+}
+collection_instances {
+  id: "World_Level_3"
+  collection: "/samples/typical_platformer/typical_platformer/World_Level_3.collection"
+  position {
+    x: 848.0
+    y: -320.0
+    z: 0.0
+  }
+}
+scale_along_z: 0

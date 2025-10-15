@@ -12,21 +12,21 @@ Or point to the zip file of a [specific release](https://github.com/TheKing0x9/l
 
 ## Usage
 
-- Add this library to your project
-- Copy the LDTK project file and relevant tileset images to your Defold project
-- Add a configuration file as detailed below
-- Click `View -> Change LDTK Config File` and select the config file.
-- Click `Right Click -> Generate Tilemaps` on the LDTK file in the editor.
+* Add this library to your project
+* Copy the LDTK project file and relevant tileset images to your Defold project
+* Add a configuration file as detailed below
+* Click `View -> Change LDTK Config File` and select the config file.
+* Click `Right Click -> Generate Tilemaps` on the LDTK file in the editor.
 
 This will create a folder with the same name as the LDTK file and place the generated tilemaps, tilesources and collections in it.
 
 The converter generates the following:
 
-- Defold tilesources using the same settings as specified in the LDTK file
-- Defold tilemaps (one tilemap per layer)
-- Defold collections (one collection per level) with all the tilemaps and gameobjects placed as in the LDTK file.
-- A collection that has levels placed exactly as in LDTK world view.
-- A Lua Module that contains Enums, and Entities and World properties.
+* Defold tilesources using the same settings as specified in the LDTK file
+* Defold tilemaps (one tilemap per layer)
+* Defold collections (one collection per level) with all the tilemaps and gameobjects placed as in the LDTK file.
+* A collection that has levels placed exactly as in LDTK world view.
+* A Lua Module that contains Enums, and Entities and World properties.
 
 > Ensure that the images referred to in LDTK projects are within the Defold project's directory.
 
@@ -79,17 +79,17 @@ An example project is provided in the `example` folder. It is a small platformer
 
 Following section details some major differences between LDTK and Defold.
 
-- **Important** If the provided image is not a multiple of the tile size, Defold ignores the excess part of image, while LDTK counts it as a tile. This creates differences in numbering of tiles, leading to undefined behaviour
-- Defold uses a X -> Right, Y -> Up coordinate system, while LDTK uses a X -> Right, Y -> Down coordinate system. While the layout of generated collections will be the same, expect some changes in the actual positions.
-- Defold uses a Z - order to determine the rendering order of the tilemaps, while LDTK uses the order of the layers.
+* **Important** If the provided image is not a multiple of the tile size, Defold ignores the excess part of image, while LDTK counts it as a tile. This creates differences in numbering of tiles, leading to undefined behaviour
+* Defold uses a X -> Right, Y -> Up coordinate system, while LDTK uses a X -> Right, Y -> Down coordinate system. While the layout of generated collections will be the same, expect some changes in the actual positions.
+* Defold uses a Z - order to determine the rendering order of the tilemaps, while LDTK uses the order of the layers.
 
 ## Unsupported Features
 
-- Tile offsets are not supported at the moment, because Defold tilemaps do not support tile offsets
-- Tile opacity is not supported for the same reason. However, a common layer opacity is supported.
-- Tilemaps without an images are also not supported. This may change in the near future, perhaps by exporting such tilemaps to a simple table?
-- Background images are not supported at the moment. Will be added in the next release
-- A way to specify the a layer / entity Z - order needs to be decided upon.
+* Tile offsets are not supported at the moment, because Defold tilemaps do not support tile offsets
+* Tile opacity is not supported for the same reason. However, a common layer opacity is supported.
+* Tilemaps without an images are also not supported. This may change in the near future, perhaps by exporting such tilemaps to a simple table?
+* Background images are not supported at the moment. Will be added in the next release
+* A way to specify the a layer / entity Z - order needs to be decided upon.
 
 ## Credits
 

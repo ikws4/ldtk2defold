@@ -26,9 +26,10 @@ function M.get_commands()
             end,
             run = function(opts)
                 local root, identifier, _ = get_resource_path(editor.get(opts.selection, "path"))
+                local config_file = root .. "config.lua"
 
                 local text = editor.get(opts.selection, "text")
-                parser.parse(root, identifier, text, nil)
+                parser.parse(root, identifier, text, config_file)
 
                 return {}
             end

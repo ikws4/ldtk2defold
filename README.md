@@ -55,6 +55,9 @@ config.map_type = enums.map_type.LEVELS_ONLY -- or enums.map_type.MAIN_COLLECTIO
 -- when the LDTK Layout is set to Horizontal or Vertical, this value is used to offset the levels
 config.lvl_offsets = 48
 
+-- scalar value to seperate each layer
+config.layer_scalar = 0.0001
+
 -- assigns a gameobject to an entity. The key is the entity name and the value is the gameobject name
 -- example: to create a reference for entitiy player
 -- config.entities = { ['Player'] = '/example/gameobjects/player.go', }

@@ -98,6 +98,7 @@ local function create_tilemap(layer, tileset, root, txns)
     local h = layer.__cHei
     local layers = { [1] = tilemap.tiles.new() }
     local layers_z = { [1] = 0.0 }
+    local layer_scalar = config.layer_scalar or 0.0001
 
     local function get_empty_tiles(x, y)
         for i = 1, #layers do
@@ -106,7 +107,7 @@ local function create_tilemap(layer, tileset, root, txns)
             end
         end
         table.insert(layers, tilemap.tiles.new())
-        table.insert(layers_z, 0.0001 * (#layers_z))
+        table.insert(layers_z, layer_scalar * (#layers_z))
         return layers[#layers]
     end
 
@@ -267,7 +268,7 @@ function parser.parse(root, identifier, text, config_file)
     local layers_z = {}
     local offset = 0.0
     for i, layer in ipairs(data.defs.layers) do
-        layers_z[layer.identifier] = offset - 0.001 * i
+        layers_z[layer.identifier] = offset - config.layer_scalar * 10 * i
     end
 
     local level_fields = {}
